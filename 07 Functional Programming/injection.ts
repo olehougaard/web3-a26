@@ -42,7 +42,7 @@ const reportDailyTaxesDI = (read: Reader, report: Writer) => async (date: Date) 
   return report(taxes)
 }
 
-const AlternativeReportDailyTaxesDI = (read: Reader, report: Writer) =>async (date: Date) => 
+const AlternativeReportDailyTaxesDI = (read: Reader, report: Writer) => async (date: Date) => 
   read(date)
   .then(taxCalc)
   .then(report)
